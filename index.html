@@ -500,6 +500,15 @@
             color: var(--muted);
         }
 
+        .site-footer {
+            width: min(var(--max), calc(100% - 40px));
+            margin: 0 auto;
+            padding: 28px 0 34px;
+            color: var(--muted);
+            text-align: center;
+            border-top: 1px solid var(--line);
+        }
+
         .back-to-top {
             position: fixed;
             right: 22px;
@@ -638,7 +647,7 @@
                 <div class="hero-actions">
                     <a class="button primary" href="#projects"><i data-lucide="folder-kanban"></i><span data-lang="zh">查看项目</span><span data-lang="en">View Projects</span></a>
                     <a class="button" href="mailto:qiang_fu2024@163.com"><i data-lucide="mail"></i><span data-lang="zh">发送邮件</span><span data-lang="en">Email Me</span></a>
-                    <a class="button" href="#" aria-label="GitHub placeholder">
+                    <a class="button" href="https://github.com/harespeed" aria-label="GitHub profile">
                         <svg class="github-mark" viewBox="0 0 16 16" aria-hidden="true">
                             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 3.87c.68 0 1.36.09 2 .26 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
                         </svg>
@@ -775,8 +784,8 @@
                     <h2 class="section-title" data-lang="zh"><i data-lucide="folder-kanban"></i> 项目经历</h2>
                     <h2 class="section-title" data-lang="en"><i data-lucide="folder-kanban"></i> Projects</h2>
                 </div>
-                <p class="section-note" data-lang="zh">链接先使用占位按钮，后续可以替换为 GitHub、Demo、报告或论文地址。</p>
-                <p class="section-note" data-lang="en">Links are placeholders for now and can later point to GitHub repos, demos, reports, or papers.</p>
+                <p class="section-note" data-lang="zh">项目仅保留 Repo 入口，缺失的仓库链接后续可直接替换。</p>
+                <p class="section-note" data-lang="en">Projects keep only Repo entries; missing repository links can be replaced later.</p>
             </div>
 
             <div class="project-grid">
@@ -801,8 +810,6 @@
                     </ul>
                     <div class="card-actions">
                         <a class="mini-link" href="#"><svg class="github-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 3.87c.68 0 1.36.09 2 .26 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Repo</a>
-                        <a class="mini-link" href="#"><i data-lucide="external-link"></i>Demo</a>
-                        <a class="mini-link" href="#"><i data-lucide="file-text"></i>Report</a>
                     </div>
                 </article>
 
@@ -827,8 +834,6 @@
                     </ul>
                     <div class="card-actions">
                         <a class="mini-link" href="#"><svg class="github-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 3.87c.68 0 1.36.09 2 .26 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Repo</a>
-                        <a class="mini-link" href="#"><i data-lucide="external-link"></i>Demo</a>
-                        <a class="mini-link" href="#"><i data-lucide="file-text"></i>Case Study</a>
                     </div>
                 </article>
 
@@ -852,9 +857,7 @@
                         <li>Improved FactCC from 52% to 71% through prompt engineering.</li>
                     </ul>
                     <div class="card-actions">
-                        <a class="mini-link" href="#"><svg class="github-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 3.87c.68 0 1.36.09 2 .26 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Repo</a>
-                        <a class="mini-link" href="#"><i data-lucide="bar-chart-3"></i>Metrics</a>
-                        <a class="mini-link" href="#"><i data-lucide="file-text"></i>Report</a>
+                        <a class="mini-link" href="https://github.com/harespeed/Abstractive_Summarizer"><svg class="github-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 3.87c.68 0 1.36.09 2 .26 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Repo</a>
                     </div>
                 </article>
 
@@ -879,8 +882,6 @@
                     </ul>
                     <div class="card-actions">
                         <a class="mini-link" href="#"><svg class="github-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 3.87c.68 0 1.36.09 2 .26 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Repo</a>
-                        <a class="mini-link" href="#"><i data-lucide="external-link"></i>Demo</a>
-                        <a class="mini-link" href="#"><i data-lucide="file-text"></i>Design Doc</a>
                     </div>
                 </article>
             </div>
@@ -895,22 +896,22 @@
                 <article class="skill-card" data-aos="fade-up">
                     <h3 data-lang="zh">编程语言</h3>
                     <h3 data-lang="en">Programming</h3>
-                    <p>Python, C/C++</p>
+                    <p>Python, C/C++, Golang, SQL</p>
                 </article>
                 <article class="skill-card" data-aos="fade-up">
                     <h3 data-lang="zh">大模型与算法</h3>
                     <h3 data-lang="en">LLM and Algorithms</h3>
-                    <p>SFT, RLHF, Knowledge Distillation, Multimodal LLM, Chain-of-Thought</p>
+                    <p>SFT, RLHF, Knowledge Distillation, Multimodal LLM, Chain-of-Thought, 数学建模算法, 数据结构与算法</p>
                 </article>
                 <article class="skill-card" data-aos="fade-up">
                     <h3 data-lang="zh">检索与 Agent 系统</h3>
                     <h3 data-lang="en">Retrieval and Agents</h3>
-                    <p>RAG, Agent, Multi-Agent, MCP, workflow orchestration</p>
+                    <p>RAG, Agent, Multi-Agent, MCP, PI-Agent, LangChain, LangGraph, workflow orchestration</p>
                 </article>
                 <article class="skill-card" data-aos="fade-up">
                     <h3 data-lang="zh">框架与平台</h3>
                     <h3 data-lang="en">Frameworks and Platforms</h3>
-                    <p>PyTorch, Hugging Face Transformers, Linux, Git</p>
+                    <p>PyTorch, TensorFlow, Hugging Face Transformers, ModelScope, Kaggle, Linux, Git</p>
                 </article>
             </div>
         </section>
@@ -920,13 +921,15 @@
                 <div>
                     <h2 data-lang="zh">欢迎联系</h2>
                     <h2 data-lang="en">Get in Touch</h2>
-                    <p data-lang="zh">如果你要补 GitHub、项目 Demo 或作品集链接，可以直接给我链接清单，我会替换这些占位按钮。</p>
-                    <p data-lang="en">Send over the GitHub, demo, or portfolio links later and the placeholder buttons can be replaced directly.</p>
                 </div>
                 <a class="button primary" href="mailto:qiang_fu2024@163.com"><i data-lucide="mail"></i>qiang_fu2024@163.com</a>
             </div>
         </section>
     </main>
+
+    <footer class="site-footer">
+        付强 @ <span id="current-year"></span>
+    </footer>
 
     <a class="back-to-top" href="#top" aria-label="Back to top"><i data-lucide="arrow-up"></i></a>
 
@@ -934,6 +937,16 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
         const langButtons = document.querySelectorAll('[data-switch-lang]');
+        const currentYear = document.getElementById('current-year');
+
+        function updateFooterYear() {
+            if (!currentYear) return;
+            currentYear.textContent = new Date().getFullYear();
+        }
+
+        updateFooterYear();
+        setInterval(updateFooterYear, 24 * 60 * 60 * 1000);
+
         function switchLanguage(lang) {
             document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
             document.body.classList.toggle('lang-zh', lang === 'zh');
