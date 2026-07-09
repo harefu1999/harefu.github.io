@@ -198,6 +198,22 @@
             height: 20px;
         }
 
+        .hero-identity {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .hero-photo {
+            width: clamp(92px, 12vw, 136px);
+            height: clamp(92px, 12vw, 136px);
+            flex: 0 0 auto;
+            border: 5px solid #fffaf2;
+            border-radius: 26px;
+            object-fit: cover;
+            box-shadow: 0 14px 32px rgba(66, 50, 35, 0.15);
+        }
+
         h1 {
             margin: 0;
             max-width: 780px;
@@ -258,17 +274,6 @@
             border-radius: var(--radius);
             background: var(--panel);
             box-shadow: var(--shadow);
-        }
-
-        .profile-photo {
-            width: 116px;
-            height: 116px;
-            display: block;
-            margin-bottom: 22px;
-            border: 4px solid #fffaf2;
-            border-radius: 22px;
-            object-fit: cover;
-            box-shadow: 0 12px 28px rgba(66, 50, 35, 0.13);
         }
 
         .profile-panel h2 {
@@ -552,6 +557,12 @@
                 gap: 28px;
             }
 
+            .hero-identity {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 18px;
+            }
+
             .hero-actions,
             .card-actions {
                 flex-direction: column;
@@ -614,8 +625,13 @@
             <div data-aos="fade-up">
                 <p class="eyebrow" data-lang="zh"><i data-lucide="sparkles"></i> 人工智能工程师</p>
                 <p class="eyebrow" data-lang="en"><i data-lucide="sparkles"></i> Artificial Intelligence Engineer</p>
-                <h1 data-lang="zh">付强 Qiang Fu</h1>
-                <h1 data-lang="en">Qiang Fu</h1>
+                <div class="hero-identity">
+                    <img class="hero-photo" src="assets/img/profile.jpg" alt="付强 Qiang Fu 的个人照片" width="136" height="136">
+                    <div>
+                        <h1 data-lang="zh">付强 Qiang Fu</h1>
+                        <h1 data-lang="en">Qiang Fu</h1>
+                    </div>
+                </div>
                 <p class="subtitle" data-lang="zh">关注大语言模型应用、RAG、Agent workflow、模型评测与工程落地，能够从算法、系统设计到部署交付串联完整 AI 产品链路。</p>
                 <p class="subtitle" data-lang="en">Focused on LLM applications, RAG, Agent workflows, model evaluation, and production-oriented AI systems across algorithm design, system architecture, and deployment.</p>
                 <div class="hero-actions">
@@ -627,7 +643,6 @@
             </div>
 
             <aside class="profile-panel" data-aos="fade-left" aria-label="Profile summary">
-                <img class="profile-photo" src="assets/img/profile.jpg" alt="付强 Qiang Fu 的个人照片" width="116" height="116">
                 <h2 data-lang="zh">AI Engineer / LLM Application Builder</h2>
                 <h2 data-lang="en">AI Engineer / LLM Application Builder</h2>
                 <p data-lang="zh">硕士就读于 Cardiff University Advanced Computer Science，项目方向覆盖 LLM、RAG、多智能体、摘要生成和机器学习建模。</p>
