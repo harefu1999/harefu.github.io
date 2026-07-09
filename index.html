@@ -60,8 +60,16 @@
             margin: 0;
             color: var(--ink);
             background: var(--bg);
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Noto Sans SC", sans-serif;
+            font-family: "Times New Roman", Times, serif;
             line-height: 1.65;
+        }
+
+        body.lang-zh {
+            font-family: SimSun, "Songti SC", "STSong", serif;
+        }
+
+        body.lang-en {
+            font-family: "Times New Roman", Times, serif;
         }
 
         a {
@@ -106,19 +114,9 @@
         .brand {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
+            min-height: 42px;
             font-weight: 800;
-        }
-
-        .brand-mark {
-            width: 42px;
-            height: 42px;
-            display: grid;
-            place-items: center;
-            border-radius: 10px;
-            color: white;
-            background: var(--brand);
-            font-size: 0.92rem;
+            font-size: 1.12rem;
         }
 
         .nav {
@@ -249,6 +247,13 @@
             color: var(--ink);
             font-weight: 700;
             transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .github-mark {
+            width: 20px;
+            height: 20px;
+            flex: 0 0 auto;
+            fill: currentColor;
         }
 
         .button:hover {
@@ -549,10 +554,6 @@
                 width: min(100% - 28px, var(--max));
             }
 
-            .brand span:last-child {
-                display: none;
-            }
-
             .hero {
                 gap: 28px;
             }
@@ -597,9 +598,9 @@
 
     <header class="topbar">
         <div class="topbar-inner">
-            <a class="brand" href="#top" aria-label="Qiang Fu home">
-                <span class="brand-mark">QF</span>
-                <span>Qiang Fu</span>
+            <a class="brand" href="#top" aria-label="Home">
+                <span data-lang="zh">欢迎来访！</span>
+                <span data-lang="en">Welcome!</span>
             </a>
             <nav class="nav" aria-label="Primary navigation">
                 <a href="#about" data-lang="zh">关于</a>
@@ -637,20 +638,24 @@
                 <div class="hero-actions">
                     <a class="button primary" href="#projects"><i data-lucide="folder-kanban"></i><span data-lang="zh">查看项目</span><span data-lang="en">View Projects</span></a>
                     <a class="button" href="mailto:qiang_fu2024@163.com"><i data-lucide="mail"></i><span data-lang="zh">发送邮件</span><span data-lang="en">Email Me</span></a>
-                    <a class="button" href="#" aria-label="GitHub placeholder"><i data-lucide="github"></i><span>GitHub</span></a>
-                    <a class="button" href="#" aria-label="Resume placeholder"><i data-lucide="file-text"></i><span data-lang="zh">简历占位</span><span data-lang="en">Resume Placeholder</span></a>
+                    <a class="button" href="#" aria-label="GitHub placeholder">
+                        <svg class="github-mark" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 3.87c.68 0 1.36.09 2 .26 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
                 </div>
             </div>
 
             <aside class="profile-panel" data-aos="fade-left" aria-label="Profile summary">
-                <h2 data-lang="zh">AI Engineer / LLM Application Builder</h2>
-                <h2 data-lang="en">AI Engineer / LLM Application Builder</h2>
-                <p data-lang="zh">硕士就读于 Cardiff University Advanced Computer Science，项目方向覆盖 LLM、RAG、多智能体、摘要生成和机器学习建模。</p>
-                <p data-lang="en">MSc in Advanced Computer Science at Cardiff University, with project work across LLMs, RAG, multi-agent systems, summarization, and ML modeling.</p>
+                <h2 data-lang="zh">当前重点</h2>
+                <h2 data-lang="en">Current Focus</h2>
+                <p data-lang="zh">围绕 LLM 应用系统，把检索、工具调用、评测与工程部署连接成可运行的产品能力。</p>
+                <p data-lang="en">Building practical LLM application systems that connect retrieval, tool use, evaluation, and deployment.</p>
                 <ul class="quick-list">
-                    <li><i class="icon" data-lucide="map-pin"></i><span data-lang="zh">可远程协作，关注 AI 工程落地</span><span data-lang="en">Available for remote collaboration on AI engineering</span></li>
-                    <li><i class="icon" data-lucide="graduation-cap"></i><span>Cardiff University, MSc Advanced Computer Science</span></li>
-                    <li><i class="icon" data-lucide="mail"></i><a href="mailto:qiang_fu2024@163.com">qiang_fu2024@163.com</a></li>
+                    <li><i class="icon" data-lucide="search"></i><span>RAG / Knowledge grounding</span></li>
+                    <li><i class="icon" data-lucide="workflow"></i><span>Agent workflow / Tool use</span></li>
+                    <li><i class="icon" data-lucide="chart-no-axes-combined"></i><span>Evaluation / Reliability</span></li>
                 </ul>
             </aside>
         </section>
@@ -795,7 +800,7 @@
                         <li>Reduced token usage by 40-60% while maintaining complex-task accuracy.</li>
                     </ul>
                     <div class="card-actions">
-                        <a class="mini-link" href="#"><i data-lucide="github"></i>Repo</a>
+                        <a class="mini-link" href="#"><svg class="github-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 3.87c.68 0 1.36.09 2 .26 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Repo</a>
                         <a class="mini-link" href="#"><i data-lucide="external-link"></i>Demo</a>
                         <a class="mini-link" href="#"><i data-lucide="file-text"></i>Report</a>
                     </div>
@@ -821,7 +826,7 @@
                         <li>Increased automatic resolution by 40%+ and reduced human intervention by 30-50%.</li>
                     </ul>
                     <div class="card-actions">
-                        <a class="mini-link" href="#"><i data-lucide="github"></i>Repo</a>
+                        <a class="mini-link" href="#"><svg class="github-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 3.87c.68 0 1.36.09 2 .26 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Repo</a>
                         <a class="mini-link" href="#"><i data-lucide="external-link"></i>Demo</a>
                         <a class="mini-link" href="#"><i data-lucide="file-text"></i>Case Study</a>
                     </div>
@@ -847,7 +852,7 @@
                         <li>Improved FactCC from 52% to 71% through prompt engineering.</li>
                     </ul>
                     <div class="card-actions">
-                        <a class="mini-link" href="#"><i data-lucide="github"></i>Repo</a>
+                        <a class="mini-link" href="#"><svg class="github-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 3.87c.68 0 1.36.09 2 .26 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Repo</a>
                         <a class="mini-link" href="#"><i data-lucide="bar-chart-3"></i>Metrics</a>
                         <a class="mini-link" href="#"><i data-lucide="file-text"></i>Report</a>
                     </div>
@@ -873,7 +878,7 @@
                         <li>Managed student profiles, history, and context permissions through MCP.</li>
                     </ul>
                     <div class="card-actions">
-                        <a class="mini-link" href="#"><i data-lucide="github"></i>Repo</a>
+                        <a class="mini-link" href="#"><svg class="github-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 3.87c.68 0 1.36.09 2 .26 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Repo</a>
                         <a class="mini-link" href="#"><i data-lucide="external-link"></i>Demo</a>
                         <a class="mini-link" href="#"><i data-lucide="file-text"></i>Design Doc</a>
                     </div>
@@ -915,8 +920,8 @@
                 <div>
                     <h2 data-lang="zh">欢迎联系</h2>
                     <h2 data-lang="en">Get in Touch</h2>
-                    <p data-lang="zh">如果你要补 GitHub、简历、项目 Demo 或作品集链接，可以直接给我链接清单，我会替换这些占位按钮。</p>
-                    <p data-lang="en">Send over the GitHub, resume, demo, or portfolio links later and the placeholder buttons can be replaced directly.</p>
+                    <p data-lang="zh">如果你要补 GitHub、项目 Demo 或作品集链接，可以直接给我链接清单，我会替换这些占位按钮。</p>
+                    <p data-lang="en">Send over the GitHub, demo, or portfolio links later and the placeholder buttons can be replaced directly.</p>
                 </div>
                 <a class="button primary" href="mailto:qiang_fu2024@163.com"><i data-lucide="mail"></i>qiang_fu2024@163.com</a>
             </div>

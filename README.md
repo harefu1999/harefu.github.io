@@ -4,7 +4,7 @@ This repository hosts the static GitHub Pages site for Qiang Fu / 付强.
 
 ## Structure
 
-- `index.html` - single-page portfolio and resume site.
+- `index.html` - single-page portfolio site.
 - `assets/img/og-placeholder.svg` - placeholder Open Graph sharing image.
 - `robots.txt` - crawler policy.
 - `sitemap.xml` - basic sitemap for the homepage.
@@ -14,7 +14,6 @@ This repository hosts the static GitHub Pages site for Qiang Fu / 付强.
 Several buttons currently use `#` as placeholders for future links:
 
 - GitHub profile
-- PDF resume
 - Project repositories
 - Project demos
 - Project reports or case studies
