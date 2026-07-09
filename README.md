@@ -1,6 +1,6 @@
-# Hare Fu Personal Website
+# Qiang Fu Personal Website
 
-This repository hosts the static GitHub Pages site for Fu Qiang / Hare Fu.
+This repository hosts the static GitHub Pages site for Qiang Fu / 付强.
 
 ## Structure
 
