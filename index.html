@@ -173,9 +173,7 @@
 
         .hero {
             min-height: calc(100vh - 72px);
-            display: grid;
-            grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-            gap: 42px;
+            display: flex;
             align-items: center;
             padding: 64px 0 48px;
         }
@@ -272,41 +270,6 @@
             background: var(--brand-strong);
         }
 
-        .profile-panel {
-            position: relative;
-            padding: 28px;
-            border: 1px solid var(--line);
-            border-radius: var(--radius);
-            background: var(--panel);
-            box-shadow: var(--shadow);
-        }
-
-        .profile-panel h2 {
-            margin: 0 0 8px;
-            font-size: 1.45rem;
-        }
-
-        .profile-panel p {
-            margin: 0 0 22px;
-            color: var(--muted);
-        }
-
-        .quick-list {
-            display: grid;
-            gap: 12px;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .quick-list li {
-            display: grid;
-            grid-template-columns: 24px 1fr;
-            gap: 10px;
-            align-items: start;
-            color: var(--muted);
-        }
-
         section {
             scroll-margin-top: 96px;
             padding: 58px 0;
@@ -341,6 +304,28 @@
             margin: 0;
             color: #354057;
             font-size: 1.03rem;
+        }
+
+        .focus-list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+            max-width: 920px;
+            margin: 22px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .focus-list li {
+            display: grid;
+            grid-template-columns: 22px 1fr;
+            gap: 10px;
+            align-items: start;
+            padding: 16px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--panel);
+            color: var(--muted);
         }
 
         .timeline,
@@ -552,7 +537,8 @@
             }
 
             .project-grid,
-            .skill-grid {
+            .skill-grid,
+            .focus-list {
                 grid-template-columns: 1fr 1fr;
             }
         }
@@ -591,7 +577,8 @@
             }
 
             .project-grid,
-            .skill-grid {
+            .skill-grid,
+            .focus-list {
                 grid-template-columns: 1fr;
             }
 
@@ -655,18 +642,6 @@
                     </a>
                 </div>
             </div>
-
-            <aside class="profile-panel" data-aos="fade-left" aria-label="Profile summary">
-                <h2 data-lang="zh">当前重点</h2>
-                <h2 data-lang="en">Current Focus</h2>
-                <p data-lang="zh">围绕 LLM 应用系统，把检索、工具调用、评测与工程部署连接成可运行的产品能力。</p>
-                <p data-lang="en">Building practical LLM application systems that connect retrieval, tool use, evaluation, and deployment.</p>
-                <ul class="quick-list">
-                    <li><i class="icon" data-lucide="search"></i><span>RAG / Knowledge grounding</span></li>
-                    <li><i class="icon" data-lucide="workflow"></i><span>Agent workflow / Tool use</span></li>
-                    <li><i class="icon" data-lucide="chart-no-axes-combined"></i><span>Evaluation / Reliability</span></li>
-                </ul>
-            </aside>
         </section>
 
         <section id="about">
@@ -676,6 +651,11 @@
             </div>
             <p class="about-text" data-aos="fade-up" data-lang="zh">我是一名人工智能工程师，拥有卡迪夫大学高级计算机科学硕士背景，技术方向覆盖机器学习、深度学习、自然语言处理、智能系统设计与工程落地。我尤其关注大语言模型应用系统，包括推理链路、Agent workflow、工具调用、检索增强、模型微调、模型评测和稳定性设计。同时，我也具备传统机器学习建模、误差分析、评估指标设计、后端集成与部署方面的实践经验。</p>
             <p class="about-text" data-aos="fade-up" data-lang="en">I am an AI Engineer with an MSc background in Advanced Computer Science from Cardiff University. My work spans machine learning, deep learning, NLP, intelligent system design, and production implementation. I am especially interested in LLM application systems, including reasoning pipelines, Agent workflows, tool use, retrieval augmentation, fine-tuning, evaluation, and reliability design. I also have practical experience in traditional ML modeling, error analysis, evaluation methodology, backend integration, and deployment.</p>
+            <ul class="focus-list" data-aos="fade-up" aria-label="Focus areas">
+                <li><i class="icon" data-lucide="search"></i><span>RAG / Knowledge grounding</span></li>
+                <li><i class="icon" data-lucide="workflow"></i><span>Agent workflow / Tool use</span></li>
+                <li><i class="icon" data-lucide="chart-no-axes-combined"></i><span>Evaluation / Reliability</span></li>
+            </ul>
         </section>
 
         <section id="education">
@@ -928,7 +908,8 @@
     </main>
 
     <footer class="site-footer">
-        付强 @ <span id="current-year"></span>
+        <span data-lang="zh">付强 @ <span class="current-year"></span></span>
+        <span data-lang="en">Qiang Fu @ <span class="current-year"></span></span>
     </footer>
 
     <a class="back-to-top" href="#top" aria-label="Back to top"><i data-lucide="arrow-up"></i></a>
@@ -937,11 +918,12 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
         const langButtons = document.querySelectorAll('[data-switch-lang]');
-        const currentYear = document.getElementById('current-year');
+        const currentYears = document.querySelectorAll('.current-year');
 
         function updateFooterYear() {
-            if (!currentYear) return;
-            currentYear.textContent = new Date().getFullYear();
+            currentYears.forEach((element) => {
+                element.textContent = new Date().getFullYear();
+            });
         }
 
         updateFooterYear();
